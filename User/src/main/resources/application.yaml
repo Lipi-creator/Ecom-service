@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: user-service
+  config:
+    import: optional:configserver:http://localhost:8888
+
+
+#########################################
+
+#server:
+#  port: 8082
+
+
+#  datasource: jdbc:h2:mem:test
+#    url: jdbc:postgresql://localhost:5432/mydb
+#    username: techlearning
+#    password: techlearning
+#  h2:
+#    console:
+#      enabled: true
+#  datasource:
+#    url: jdbc:h2:mem:test
+#
+#  jpa:
+##    database: POSTGRESQL
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: create
+#    database-platform: org.hibernate.dialect.PostgeSQLDialect
+
+#  spring.application.name=order-service
+#  spring.h2.console.enabled = true
+#  spring.datasource.url = jdbc:h2:mem:test
+#  spring.jpa.show-sql=true
+#  spring.jpa.hibernate.ddl-auto=create

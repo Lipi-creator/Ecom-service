@@ -1,0 +1,22 @@
+package com.techlearning.Order.repository;
+
+import com.techlearning.Order.entity.CartItem;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface CartRepository extends JpaRepository<CartItem,Long> {
+
+    CartItem findByUserIdAndProductId( String userId, String productId);
+
+    void deleteByUserIdAndProductId(String userId, String productId);
+
+    List<CartItem> findByUserId(String userId);
+
+    void deleteByUserId(String userId);
+}
+
+
+
