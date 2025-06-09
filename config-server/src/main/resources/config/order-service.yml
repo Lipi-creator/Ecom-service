@@ -17,6 +17,7 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: create
+      database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
 #        database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 eureka:
@@ -30,6 +31,6 @@ logging:
   file:
     name: logs/${spring.application.name}.log
   logback:
-    rollingpolicy:
+    rolling-policy:
       max-file-size: 5MB
       max-history: 7    #days
