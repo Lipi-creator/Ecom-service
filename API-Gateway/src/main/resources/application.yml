@@ -15,14 +15,14 @@ spring:
     gateway:
       routes:
         - id: user-service
-          uri: https://localhost:8082
+          uri: lb://USER-SERVICE
           predicates:
-            - Path=/api/user/**
+            - Path=/api/users/**
         - id: product-service
-          uri: https://localhost:8083
+          uri: lb://PRODUCT-SERVICE
           predicates:
             - Path=/api/products/**
         - id: order-service
-          uri: https://localhost:8084
+          uri: lb://ORDER-SERVICE
           predicates:
             - Path=/api/orders/**,/api/cart/**
