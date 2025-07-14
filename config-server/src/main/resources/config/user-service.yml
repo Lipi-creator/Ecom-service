@@ -17,7 +17,10 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: create
-      database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+#      database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
 #    database-platform: org.hibernate.dialect.PostgeSQLDialect
 
 #  spring.application.name=order-service
